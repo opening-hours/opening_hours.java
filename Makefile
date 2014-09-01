@@ -9,7 +9,6 @@ node_modules/opening_hours:
 
 run: OpeningHourTest.class installDependencies
 	java $(<:.class=) $(VALUE)
-	java $(<:.class=) "error"
 
 %.class: %.java
 	javac "$<"
