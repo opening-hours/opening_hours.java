@@ -38,6 +38,9 @@ public class OpeningHourTest {
         if (ENGINE != null) {
             try (Reader reader = new InputStreamReader(
                     new FileInputStream("opening_hours.js"))) {
+                ENGINE.eval(
+                    "var global=this;var window=this;var process={env:{}};" +
+                    "var console={};console.debug=print;console.log=print;console.warn=print;console.error=print;");
                 ENGINE.eval(reader);
                 // fake country/state to not get errors on holidays
                 ENGINE.eval("var nominatimJSON = {address: {state: 'Bayern', country_code: 'de'}};");
