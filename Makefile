@@ -1,4 +1,4 @@
-VALUE = "SH off"
+VALUE = "Mo-Fr 08:00-16:00"
 
 default: run
 
